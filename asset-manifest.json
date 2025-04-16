@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.c76be9d0.css",
-    "main.js": "/static/js/main.973b5484.js",
-    "static/media/about12.jpeg": "/static/media/about12.a6071abf74b8eca1d754.jpeg",
-    "static/media/Vedp.png": "/static/media/Vedp.424dfd5c7d4cd1f514dd.png",
-    "static/media/abhishekt.png": "/static/media/abhishekt.fca8aa22d088e0932869.png",
-    "static/media/ritik.png": "/static/media/ritik.599483d5ec1360d38a89.png",
-    "static/media/Pavig.jpeg": "/static/media/Pavig.b4a6b6f291b3f756b29a.jpeg",
-    "static/media/about2.jpg": "/static/media/about2.43c96245a92b0fa6783c.jpg",
-    "static/media/Join_EEA.pdf": "/static/media/Join_EEA.8bbb03ae66be37fad90b.pdf",
-    "static/media/logo.png": "/static/media/logo.3bc1e44c1150c771d22e.png",
-    "static/media/suraj.png": "/static/media/suraj.5681c519c4cd3ed8d2ee.png",
-    "static/media/shiladitya.jpg": "/static/media/shiladitya.ff862a60f5f9643ebec9.jpg",
-    "static/media/Riddhimaj.jpg": "/static/media/Riddhimaj.bd881699c1dbfab4a5bf.jpg",
-    "static/media/Chiranshu.jpg": "/static/media/Chiranshu.5c945624bd930f6cc82c.jpg",
-    "index.html": "/index.html",
-    "main.c76be9d0.css.map": "/static/css/main.c76be9d0.css.map",
-    "main.973b5484.js.map": "/static/js/main.973b5484.js.map"
+    "main.css": "/EEA/static/css/main.c76be9d0.css",
+    "main.js": "/EEA/static/js/main.3a9d1733.js",
+    "static/media/about12.jpeg": "/EEA/static/media/about12.a6071abf74b8eca1d754.jpeg",
+    "static/media/Vedp.png": "/EEA/static/media/Vedp.424dfd5c7d4cd1f514dd.png",
+    "static/media/abhishekt.png": "/EEA/static/media/abhishekt.fca8aa22d088e0932869.png",
+    "static/media/ritik.png": "/EEA/static/media/ritik.599483d5ec1360d38a89.png",
+    "static/media/Pavig.jpeg": "/EEA/static/media/Pavig.b4a6b6f291b3f756b29a.jpeg",
+    "static/media/about2.jpg": "/EEA/static/media/about2.43c96245a92b0fa6783c.jpg",
+    "static/media/Join_EEA.pdf": "/EEA/static/media/Join_EEA.8bbb03ae66be37fad90b.pdf",
+    "static/media/logo.png": "/EEA/static/media/logo.3bc1e44c1150c771d22e.png",
+    "static/media/suraj.png": "/EEA/static/media/suraj.5681c519c4cd3ed8d2ee.png",
+    "static/media/shiladitya.jpg": "/EEA/static/media/shiladitya.ff862a60f5f9643ebec9.jpg",
+    "static/media/Riddhimaj.jpg": "/EEA/static/media/Riddhimaj.bd881699c1dbfab4a5bf.jpg",
+    "static/media/Chiranshu.jpg": "/EEA/static/media/Chiranshu.5c945624bd930f6cc82c.jpg",
+    "index.html": "/EEA/index.html",
+    "main.c76be9d0.css.map": "/EEA/static/css/main.c76be9d0.css.map",
+    "main.3a9d1733.js.map": "/EEA/static/js/main.3a9d1733.js.map"
   },
   "entrypoints": [
     "static/css/main.c76be9d0.css",
-    "static/js/main.973b5484.js"
+    "static/js/main.3a9d1733.js"
   ]
 }
