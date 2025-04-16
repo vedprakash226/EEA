@@ -57,7 +57,7 @@ export default function Footer() {
   return (
     <footer 
       ref={footerRef}
-      className="relative bg-gradient-to-b from-gray-900 via-blue-950/95 to-gray-950 text-white border-t border-white/10 w-full mt-auto overflow-hidden"
+      className="relative bg-gradient-to-b from-[#0a1a35] via-[#071d3e] to-[#051a33] text-white border-t border-blue-500/20 w-full mt-auto overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => {
@@ -65,23 +65,30 @@ export default function Footer() {
         setCursorTrail([]);
       }}
     >
-      {/* Modern linear gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/30 via-indigo-950/20 to-blue-950/30 pointer-events-none"></div>
+      {/* Enhanced background with subtle pattern */}
+      <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjItMS44LTQtNC00cy00IDEuOC00IDQgMS44IDQgNCA0IDQtMS44IDQtNHptMC0xOGMwLTIuMi0xLjgtNC00LTRzLTQgMS44LTQgNCAxLjggNCA0IDQgNC00MS44IDQtNHptMTggOWMwLTIuMi0xLjgtNC00LTRzLTQgMS44LTQgNCAxLjggNCA0IDQgNCA0LTEuOCA0LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] pointer-events-none z-0"></div>
       
-      {/* Primary cursor effect - responsive to speed */}
+      {/* Improved gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/40 via-indigo-950/20 to-blue-950/40 pointer-events-none"></div>
+      
+      {/* Enhanced glow effects */}
+      <div className="absolute top-0 left-1/4 w-1/2 h-1/3 bg-blue-500/5 blur-3xl rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-0 right-1/4 w-1/2 h-1/2 bg-indigo-500/5 blur-3xl rounded-full pointer-events-none"></div>
+      
+      {/* Primary cursor effect with improved colors */}
       <div 
         className="pointer-events-none absolute rounded-full blur-2xl transition-all duration-300 z-0"
         style={{
-          opacity: isHovering ? 0.15 : 0,
+          opacity: isHovering ? 0.18 : 0,
           transform: `translate(${cursorPosition.x - 120}px, ${cursorPosition.y - 120}px)`,
           width: `${240 + mouseSpeed * 3}px`,
           height: `${240 + mouseSpeed * 3}px`,
-          background: `radial-gradient(circle, rgba(96, 165, 250, 0.2) 0%, rgba(59, 130, 246, 0.1) 70%, rgba(37, 99, 235, 0) 100%)`,
+          background: `radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, rgba(59, 130, 246, 0.15) 70%, rgba(37, 99, 235, 0) 100%)`,
           transition: mouseSpeed > 5 ? 'opacity 0.3s ease' : 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
         }}
       ></div>
       
-      {/* Cursor trail effect */}
+      {/* Cursor trail with improved blue colors */}
       {cursorTrail.map((point, index) => (
         <div
           key={index}
@@ -91,19 +98,19 @@ export default function Footer() {
             top: point.y - 40,
             width: 80 - index * 8,
             height: 80 - index * 8,
-            opacity: point.opacity * 0.12,
-            background: `radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(59, 130, 246, 0.1) 60%, rgba(37, 99, 235, 0) 100%)`,
+            opacity: point.opacity * 0.15,
+            background: `radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(59, 130, 246, 0.15) 60%, rgba(37, 99, 235, 0) 100%)`,
             transform: `scale(${1 - index * 0.1})`,
           }}
         ></div>
       ))}
       
-      {/* Interactive particles that move away from cursor - Hidden on small screens */}
+      {/* Updated particles */}
       <div className="absolute inset-0 z-0 hidden sm:block">
         {Array.from({ length: 12 }).map((_, i) => (
           <div
             key={i}
-            className="absolute rounded-full w-1.5 h-1.5 bg-blue-400/20 pointer-events-none"
+            className="absolute rounded-full w-1.5 h-1.5 bg-blue-400/30 pointer-events-none"
             style={{
               left: `${10 + (i % 4) * 25}%`,
               top: `${20 + Math.floor(i / 4) * 30}%`,
@@ -123,9 +130,9 @@ export default function Footer() {
         ))}
       </div>
       
-      {/* Modern decorative elements */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/10 to-transparent"></div>
+      {/* Enhanced borders */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/40 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-10 sm:pb-12 z-10">
         {/* Main Footer Content */}
@@ -264,7 +271,7 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                   </svg>
                 </div>
-                <span className="text-sm sm:text-base group-hover:text-white transition-colors duration-300">+1 (555) 123-4567</span>
+                <span className="text-sm sm:text-base group-hover:text-white transition-colors duration-300">0512-2596523</span>
               </li>
             </ul>
           </div>

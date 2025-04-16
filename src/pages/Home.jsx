@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react'
 import img from "../assets/about2.jpg"
 import img1 from "../assets/about1.jpeg"
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
   // State to track scroll position for parallax effect
   const [scrollY, setScrollY] = useState(0);
+  const navigate = useNavigate();
   
   // Hook for smooth parallax scrolling with Framer Motion
   const { scrollYProgress } = useScroll();
@@ -100,6 +102,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.6 }}
             whileHover={{ y: -3 }}
             whileTap={{ scale: 0.97 }}
+            onClick={()=>{navigate("/events")}}
           >
             Explore Our Work
           </motion.button>
