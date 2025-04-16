@@ -48,7 +48,7 @@ export default function Navbar() {
   }, [isMenuOpen]);
     
   const navItems = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', path: '/EEA' },
     { name: 'Events', path: '/events' },
     { name: 'Projects', path: '/projects' },
     { name: 'Blogs', path: '/blogs' },
