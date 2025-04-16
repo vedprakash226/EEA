@@ -6,6 +6,7 @@ import pavi from "../assets/team/Pavig.jpeg";
 import chiranshu from "../assets/team/Chiranshu.jpg";
 import suraj from "../assets/team/suraj.png";
 import shiladitya from "../assets/team/shiladitya.jpg";
+import shivangi from "../assets/team/shivangi.jpg"
 
 const data = [
     {
@@ -81,7 +82,17 @@ const data = [
     },
     {
         batch:"pg",
-        name: "Suraj Jaiswal",
+        name: "Shivangi Dubey",
+        role: "Overall Head",
+        img: shivangi,
+        socials: {
+            linkedin: "https://www.linkedin.com/in/ved-prakash-8b4a1b1a3/",
+            instagram: "https://www.instagram.com/vedprakash_226/",
+        },
+    },
+    {
+        batch:"pg",
+        name: "Shiladitya Banerjee",
         role: "Manager Events",
         img: shiladitya,
         socials: {

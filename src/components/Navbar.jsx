@@ -80,7 +80,7 @@ export default function Navbar() {
     }`}>
       <div className='max-w-7xl mx-auto flex justify-between items-center'>
         <div className='flex items-center justify-center'>
-          <Link to="/">
+          <Link to="/EEA">
             {/* Logo with bluish glow effect - similar to footer */}
             <div className="relative group">
               <div className={`absolute -inset-2 rounded-full ${
