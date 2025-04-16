@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import img from "../assets/about2.jpg"
-import img1 from "../assets/about1.jpeg"
+import img1 from "../assets/about12.jpeg"
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 
