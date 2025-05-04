@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "./components/Navbar.jsx";
 import Team from "./pages/Team.jsx";
 import Home from "./pages/Home.jsx";
+import Blogs from "./pages/Blogs.jsx";
 import Footer from "./components/Footer.jsx";
 import ModernLoader from "./components/ModernLoader.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -17,6 +18,7 @@ function App() {
             <Routes>
               <Route path="/teams" element={<Team />} />
               <Route path="/EEA" element={<Home/>} />
+              <Route path="/blogs" element={<Blogs />} />
             </Routes>
           </main>
           <Footer />

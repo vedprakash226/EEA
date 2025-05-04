@@ -18,7 +18,6 @@ export default function Team() {
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 pt-[100px] pb-20'>
-      {/* Header Section with Background Styling */}
       <div className="relative mb-16">
         <div className="absolute inset-0 bg-blue-600 opacity-5 skew-y-3"></div>
         <div className="relative max-w-7xl mx-auto px-6 py-12">
@@ -28,10 +27,8 @@ export default function Team() {
         </div>
       </div>
       
-      {/* Enhanced Filter Tabs with Advanced Animations */}
       <div className="max-w-md mx-auto mb-16">
         <div className="relative flex justify-center items-center bg-white/70 backdrop-blur-md rounded-full p-1.5 shadow-lg border border-blue-100/50">
-          {/* Background Pill Animation */}
           <div 
             className="absolute h-[calc(100%-6px)] transition-all duration-500 ease-out"
             style={{
@@ -46,7 +43,6 @@ export default function Team() {
             <div className="absolute inset-0 rounded-full bg-blue-200/10 animate-pulse"></div>
           </div>
 
-          {/* Button Group */}
           <button 
             onClick={() => setActiveBatch('all')}
             className={`relative z-10 flex-1 py-2.5 px-2 rounded-full font-medium text-sm transition-all duration-300 overflow-hidden
@@ -64,7 +60,6 @@ export default function Team() {
               <span className={`${activeBatch === 'all' ? 'transform scale-105' : ''} transition-transform duration-300`}>All</span>
             </span>
 
-            {/* Bottom Dot Indicator */}
             <span className={`absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-white transition-all duration-500 ${
               activeBatch === 'all' ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
             }`}></span>
@@ -110,7 +105,6 @@ export default function Team() {
               <span className={`${activeBatch === 'pg' ? 'transform scale-105' : ''} transition-transform duration-300`}>Postgrad</span>
             </span>
 
-            {/* Bottom Dot Indicator */}
             <span className={`absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-white transition-all duration-500 ${
               activeBatch === 'pg' ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
             }`}></span>
@@ -118,7 +112,6 @@ export default function Team() {
         </div>
       </div>
       
-      {/* Team Grid with Improved Cards */}
       <div className='max-w-7xl mx-auto px-6'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
           {filteredData.length > 0 ? (
@@ -134,7 +127,6 @@ export default function Team() {
                     className='w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500'
                   />
                   
-                  {/* Overlay with info on hover */}
                   <div className='absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-800/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6'>
                     <p className='text-white/90 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75'>
                       {student.role}

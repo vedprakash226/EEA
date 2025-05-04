@@ -108,8 +108,8 @@ export default function Home() {
           </motion.button>
         </div>
         
-        {/* Enhanced scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        {/* Updated scroll indicator with centered styling */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center">
           <motion.div 
             className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-1"
             animate={{ y: [0, 10, 0] }}
@@ -122,7 +122,7 @@ export default function Home() {
             />
           </motion.div>
           <motion.p
-            className="text-white/70 text-xs mt-2 font-light tracking-wider"
+            className="text-white/70 text-xs mt-2 font-light text-center tracking-wider"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 1 }}
