@@ -7,6 +7,8 @@ import gaurav from "../assets/blogs/gaurav-gupta.jpg";
 import duvuri from "../assets/blogs/Duvuri.jpg";
 import ashwiniVaishnaw from "../assets/blogs/ashwini_vaishnaw.webp";
 import arvindKrishna from "../assets/blogs/arvind_krishna.jpeg";
+import jlr from "../assets/blogs/jlr.png";
+import google from "../assets/blogs/google.png";
 
 export const blogData = [
   {
@@ -277,5 +279,114 @@ export const blogData = [
       <p>Arvind Krishna's journey from a small town in India to the pinnacle of the global tech industry is a testament to his intellect, dedication, and leadership abilities. As the CEO of IBM, he continues to navigate the company through the rapidly evolving technological landscape. Krishna's impact extends beyond the corporate realm, as he strives to shape a future where technology serves as a force for good, driving innovation, and addressing some of the world's most pressing issues. With his visionary leadership, Arvind Krishna remains a key figure in the ongoing narrative of the tech industry's evolution.</p>
     `,
     category: "alumni"
+  },
+  {
+    id: 10,
+    name: "Rudransh Goel",
+    role: "JLR EV Powertrain Intern",
+    image: jlr,
+    content: `
+      <h3>From Nervous Freshie to JLR-EV Powertrain Intern: Rudransh Goel's Journey</h3>
+      
+      <h4>Introduction</h4>
+      <p>Meet Rudransh Goel, a Year '21 B.Tech. student in Electrical Engineering from Ghaziabad, U.P. His trajectory from an anxious interviewee to a Pre-Placement Offer (PPO) holder at Jaguar Land Rover's EV Powertrain division is anything but linear. It's a tale of high-stakes juggling, self-doubt, and a decisive mindset shift that ultimately landed him in his dream role. If you've ever felt overwhelmed by placements, academics, and extra commitments, Rudransh's story will not only resonate—it will embolden you to keep pushing.</p>
+      
+      <h4>Background: Academic Excellence Meets Early Jitters</h4>
+      <p>Rudransh's academic record has always been exemplar. Yet, when the campus recruitment drive kicked off in late July, coinciding with a barrage of SURGE project evaluations, quizzes od regular semester courses, and Online Assessments by companies, he felt the familiar sting of nervousness.</p>
+      <p>Despite clearing multiple Data Structures & Algorithms (DSA) rounds and reaching interview stages, his anxiety betrayed him during face-to-face sessions. He recalls one HR remark:</p>
+      <p><em>"Why do you seem so tense?"</em></p>
+      <p>That offhand comment compounded each rejection notice—until Rudransh began to accept that placement season might pass him by.</p>
+      
+      <h4>The Turning Point: Letting Go of the Outcome</h4>
+      <p>Rudransh's real breakthrough came when he adopted a mindset of detachment from results. He reframed each interview as a lesson in karma—not a make-or-break exam. That simple shift in perspective allowed him to answer with clarity and confidence instead of panic.</p>
+      <p>"I treated the interview as just another step. I wasn't worried about whether I'd get selected," he says.</p>
+      <p>And because of this newfound calm, he aced the subsequent interviews. Now being properly acquainted to interview process, he aced his very next interview by JLR.</p>
+      
+      <h4>From Hardware Interview to Software Role</h4>
+      <p>Interestingly, JLR's campus recruitment focus during his internship drive was strictly hardware roles; they hadn't opened software positions at the time. After clearing two technical rounds specifically tailored for hardware candidates, Rudransh sat in for his final interview. While the recruiters noted that his resume and past projects leaned heavily toward software development, they extended him an offer for internship.</p>
+      <p>Rather than pigeonhole him, the JLR team recognized his Software Development Engineer (SDE) interests and skill set. He was thus allocated to the EV Powertrain team—an assignment that serendipitously matched his passion for embedded systems and sensor-driven programming.</p>
+      <p>"They saw my software background on paper. Even though the drive was for hardware, they made space for me in SDE tasks," Rudransh explains.</p>
+      
+      <h4>Internship Experience: Two Months of Intense, Hands-On Learning</h4>
+      <p>Starting in May 2024, Rudransh plunged into EV sensor programming. The working environment at JLR, he notes, "felt remarkably like an IIT lab: fast-paced yet collaborative, with mentors who understood freshies' initial struggles."</p>
+      <p>For two months, he immersed himself in programming sensors for various tasks in an EV.</p>
+      <p>At the end of his internship, Rudransh presented his contributions in a formal review meeting. His managers' glowing feedback, combined with the team's manpower needs, led HR to extend him a Pre-Placement Offer (PPO) around late August, shortly after he'd returned to campus for his 7th semester.</p>
+      
+      <h4>Balancing Acts: Academics, Projects, and SDE Prep</h4>
+      <p>Those two months of summer were a crucible of productivity. Rudransh balanced:</p>
+      <ul>
+        <li>SURGE Project deadlines and evaluations</li>
+        <li>Regular Quizzes and end-term exams for two departments</li>
+        <li>Online Assessment Tests (OAs) for other companies</li>
+        <li>Software Development Engineer (SDE) interview preparation</li>
+      </ul>
+      <p>He remembers that period as "the most focused stretch of my college life," where not a single minute was surrendered to social media. Yet, he warns future candidates:</p>
+      <p>"Plan strategically. Don't take on more than you can manage—especially in July, when every deadline converges."</p>
+      
+      <h4>Lessons & Takeaways</h4>
+      <ul>
+        <li><strong>Detach from the outcome.</strong> Anxiety over results often undermines performance; zero in on the process instead.</li>
+        <li><strong>Advocate for your skills.</strong> Even if a role isn't a perfect match, highlight how your strengths align with the company's needs.</li>
+        <li><strong>Maximize every minute.</strong> High-stakes seasons demand discipline—social media can wait.</li>
+        <li><strong>Choose commitments wisely.</strong> Overextending on projects can detract from your core objectives.</li>
+      </ul>
+      
+      <h4>Conclusion: Onward and Upward</h4>
+      <p>Rudransh's path—from a jittery candidate to a PPO-holder in JLR's EV Powertrain division—was neither smooth nor guaranteed. It involved self-reflection, a critical mindset shift, and relentless hustle. As he gears up to start full-time at JLR, his journey stands as a powerful reminder: serendipity favours the prepared mind—and the courageous heart.</p>
+      <p>"Looking back, I feel fortunate—not just for the offer but for everything I learned along the way," he says.</p>
+      <p>May Rudransh's experience embolden you to embrace each challenge as a stepping stone—and to transform your own uncertainties into opportunities for growth.</p>
+    `,
+    category: "intern"
+  },
+  {
+    id: 11,
+    name: "Meher Goenka",
+    role: "Software Engineer Intern at Google",
+    image: google,
+    content: `
+      <h3>Interning at Google: Meher Goenka's Journey into Software Engineering</h3>
+      
+      <p>Meher Goenka, a Y21 student from the Department of Electrical Engineering at IIT Kanpur, secured a coveted Software Development Engineer (SDE) internship at Google India, Bangalore. Her experience offers valuable insights into the nature of tech internships, the selection process, and life at one of the world's most admired companies.</p>
+      
+      <h4>The Internship Experience</h4>
+      <p>The internship ran for 10 weeks, from May 13 to July 19, and Meher was placed in the Google Nest – Data Analytics Team, which works on products like Google Home. The allocation of teams was random, and interns were not informed in advance about which product or domain they would be working on. Despite the uncertainty, Meher found herself in a highly supportive and welcoming team that made the learning curve much smoother.</p>
+      
+      <p>Her project focused on improving automation suggestions in Google Home. The existing system lacked personalization, and her job was to develop a model that could recommend automations based on user behavior. While the final output was fed into Gemini (Google's AI model) through prompt engineering, Meher's main contribution was in writing functions to identify usage patterns. The work was primarily in Java, and although object-oriented programming posed a few challenges in the beginning, she gradually became comfortable with it.</p>
+      
+      <h4>Nature of Work</h4>
+      <p>The nature of the work leaned more towards backend development than algorithmic problem-solving, with a focus on creating APIs and writing functional code. The experience was not similar to competitive programming (CP) but was rewarding in its own way. She also explored Google's internal tools, including one where engineers can search for and explore the source code of various internal products — an overwhelming but fascinating aspect of the internship.</p>
+      
+      <h4>Google's Work Culture</h4>
+      <p>One of the standout aspects of her time at Google was the work culture. The environment was described as highly encouraging, collaborative, and comfortable. From helpful teammates to generous office perks like free meals, coffee breaks, and walk-friendly schedules, the lifestyle at Google allowed interns to work efficiently without stress. On most days, the actual focused work lasted around 4 to 5 hours, balanced by breaks and social interactions.</p>
+      
+      <p>"SDE life is very chill," Meher explains. "Breakfast in office, 1 hour work, then coffee, then lunch, then walk, then work, then coffee and then till dinner and then go, so 4-5 hrs of work."</p>
+      
+      <h4>Selection Process</h4>
+      <p>The process of getting this internship through the placement cell involved a tough online assessment, but Meher noted that the OA was not given much weight during final selections — more of a formality than a deciding factor. For shortlisting, competitive programming ratings played a stronger role for male candidates, while for girls from departments like CSE, EE, and MTH, resume-based shortlisting was more common.</p>
+      
+      <p>"OA was too hard, not much considered, namesake," she recalls. "For shortlisting, boys were selected based on CP rating, while for girls from CSE, EE, MTH, it was resume-based."</p>
+      
+      <h4>Pre-Placement Offer (PPO) Process</h4>
+      <p>When it came to the Pre-Placement Offer (PPO), Meher highlighted the element of uncertainty. The decision depended heavily on internal openings in the same or similar teams. Interns were required to document their work, update their resume and CPI, and wait for evaluation by an external team. She emphasized that increasing CPI in the 5th and 6th semesters could make a real difference, as PPO evaluations are objective and CPI is a major component.</p>
+      
+      <p>"PPO is luck based," she explains. "They had us document the code written, we had to update resume and CPI, this is given to an external team who evaluates objectively. It's based on if there is an opening in your same team or similar team, sometimes if not then no PPO."</p>
+      
+      <p>Interestingly, she was not directly informed by Google about the shortlisting. It was only when BCG informed her that Google had extended an offer as well that she knew about it.</p>
+      
+      <h4>Career Choices & Industry Insights</h4>
+      <p>In terms of long-term career choices, Meher always knew she wanted to code. Consulting roles didn't interest her, and she mostly sat for Day 1 tech companies. While there is currently a lot of hype around AI/ML, she believes that students should not stress too much over choosing between SDE and ML roles during college. Skills, adaptability, and continuous learning are what truly matter in the long run — even seniors and team leads at top companies are facing similar career uncertainties.</p>
+      
+      <p>"For your batch you should not worry about SDE vs AI/ML," she advises, "later on in your job you can sort it out, even your boss might be worrying about their job. It's about skills and learning, as long as you're standing out and updating your skills, it would be fine."</p>
+      
+      <p>She also mentioned the emergence of SDE roles in non-tech companies like OLA, which now build their own cloud platforms and hire engineers for internal solutions. However, students from hardware backgrounds often don't apply for SDE roles through placements due to the commitment involved — if selected, the offer must be accepted.</p>
+      
+      <h4>Advice for Aspirants</h4>
+      <p>To sum up her advice to juniors, Meher emphasized the importance of maintaining consistency, documenting your work well, keeping your manager in the loop, and delivering high-quality code regularly. A chill work environment doesn't mean low expectations — it simply allows individuals to focus and grow without pressure.</p>
+      
+      <p>"Quality of your work, code submissions consistently, and keep your manager updated," she recommends as keys to success.</p>
+      
+      <p>Her journey to Google reflects a combination of preparation, persistence, and perspective — a valuable example for anyone aspiring to make their mark in the world of tech.</p>
+    `,
+    category: "intern"
   }
 ];

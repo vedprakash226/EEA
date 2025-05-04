@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'; // Add AnimatePresence import
 import { blogData } from './blogdata';
 
 export default function Blogs() {
@@ -224,61 +224,179 @@ export default function Blogs() {
       </div>
 
       {/* Custom Modal Dialog */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-          <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" onClick={closeDialog}></div>
-          
-          <div className="flex items-center justify-center min-h-screen p-4">
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl transform transition-all w-full max-w-5xl max-h-[85vh]">
-              <button
-                onClick={closeDialog}
-                className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10"
-                aria-label="Close"
+      <AnimatePresence>
+        {isOpen && (
+          <div className="fixed inset-0 z-50 overflow-y-auto backdrop-blur-sm" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <motion.div 
+              className="fixed inset-0 bg-black/60"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={closeDialog}
+            ></motion.div>
+            
+            <div className="flex items-center justify-center min-h-screen p-4">
+              <motion.div 
+                className="relative bg-white rounded-3xl overflow-hidden shadow-2xl w-full max-w-5xl max-h-[85vh]"
+                initial={{ opacity: 0, scale: 0.9, y: 50 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 30 }}
+                transition={{
+                  type: "spring",
+                  damping: 30,
+                  stiffness: 300,
+                  duration: 0.4
+                }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              
-              {selectedBlog && (
-                <div className="p-6">
-                  <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-                    <div className="md:col-span-2">
-                      <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                        <img 
-                          src={selectedBlog.image} 
-                          alt={selectedBlog.name} 
-                          className="w-full h-full object-cover object-center"
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                          <h3 className="text-xl font-bold text-white">{selectedBlog.name}</h3>
-                          <p className="text-blue-200">{selectedBlog.role}</p>
-                        </div>
-                      </div>
-                      
-                      <div className="mt-4">
-                        <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                          selectedBlog.category === 'alumni' 
-                            ? 'bg-blue-100 text-blue-800' 
-                            : 'bg-emerald-100 text-emerald-800'
-                        }`}>
-                          {selectedBlog.category === 'alumni' ? 'Alumni Story' : 'Internship Experience'}
-                        </span>
-                      </div>
-                      
-                      
-                    </div>
+                {/* Decorative elements */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-400/10 to-indigo-400/20 rounded-bl-full -z-0"></div>
+                
+                {/* Close button */}
+                <motion.button
+                  onClick={closeDialog}
+                  className="absolute top-4 right-4 p-2 rounded-full bg-gray-100/80 backdrop-blur-sm hover:bg-gray-200 transition-all z-10 group"
+                  aria-label="Close"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-700 group-hover:text-red-600 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </motion.button>
+                
+                {selectedBlog && (
+                  <div className="p-7">
+                    {/* Add a more organized layout with improved typography and spacing */}
+                    <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+                      <motion.div 
+                        className="md:col-span-2"
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                      >
+                        {/* Enhanced profile section */}
+                        <motion.div 
+                          className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg"
+                          whileHover={{ scale: 1.02 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <img 
+                            src={selectedBlog.image} 
+                            alt={selectedBlog.name} 
+                            className="w-full h-full object-cover object-center"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                          <div className="absolute bottom-0 left-0 right-0 p-5">
+                            <motion.h3 
+                              className="text-2xl font-bold text-white"
+                              initial={{ opacity: 0, y: 10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ delay: 0.3, duration: 0.4 }}
+                            >
+                              {selectedBlog.name}
+                            </motion.h3>
+                            <motion.p 
+                              className="text-blue-200"
+                              initial={{ opacity: 0, y: 10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ delay: 0.4, duration: 0.4 }}
+                            >
+                              {selectedBlog.role}
+                            </motion.p>
+                          </div>
+                        </motion.div>
+                        
+                        {/* Improved category badge with animation */}
+                        <motion.div 
+                          className="mt-5 space-y-4"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.5, duration: 0.4 }}
+                        >
+                          <div className="flex flex-wrap gap-2">
+                            <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium ${
+                              selectedBlog.category === 'alumni' 
+                                ? 'bg-gradient-to-r from-blue-500/10 to-indigo-500/10 text-blue-800 border border-blue-200' 
+                                : 'bg-gradient-to-r from-emerald-500/10 to-teal-500/10 text-emerald-800 border border-emerald-200'
+                            }`}>
+                              {selectedBlog.category === 'alumni' ? (
+                                <>
+                                  <svg className="w-4 h-4 mr-1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M8 14L6 22L12 19L18 22L16 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                  </svg>
+                                  Alumni Story
+                                </>
+                              ) : (
+                                <>
+                                  <svg className="w-4 h-4 mr-1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 14V17M16 14V17M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M2.5 8.5H21.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                  </svg>
+                                  Internship Experience
+                                </>
+                              )}
+                            </span>
+                          </div>
 
-                    <div className="md:col-span-3 overflow-y-auto max-h-[70vh] pr-2 custom-scrollbar">
-                      <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: selectedBlog.content }}></div>
+                          
+                        </motion.div>
+                      </motion.div>
+
+                      <motion.div 
+                        className="md:col-span-3 overflow-y-auto max-h-[70vh] pr-3 custom-scrollbar"
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.3, duration: 0.5 }}
+                      >
+                        {/* Before the content, add a title bar with tab-like navigation */}
+                        <div className="mb-6 border-b border-gray-200">
+                          <div className="flex">
+                            <button className="px-4 py-2 text-blue-600 font-medium border-b-2 border-blue-600">
+                              Story
+                            </button>
+                            
+                            {selectedBlog.category === 'intern' && (
+                              <button className="px-4 py-2 text-gray-500 hover:text-gray-700 font-medium">
+                                Internship Details
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                        
+                        {/* Enhance the content display with better typography */}
+                        <div 
+                          className="prose prose-lg max-w-none prose-headings:text-blue-700 prose-headings:font-bold prose-p:text-gray-600 prose-strong:text-gray-800 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-li:text-gray-600"
+                          dangerouslySetInnerHTML={{ __html: selectedBlog.content }}
+                        ></div>
+
+                        {/* Add a "back to top" button for longer content */}
+                        <motion.button
+                          className="mt-8 flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 transition-colors"
+                          onClick={() => {
+                            // Scroll to top of modal content
+                            const contentDiv = document.querySelector('.custom-scrollbar');
+                            if (contentDiv) contentDiv.scrollTop = 0;
+                          }}
+                          whileHover={{ y: -3 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                          </svg>
+                          Back to top
+                        </motion.button>
+                      </motion.div>
                     </div>
                   </div>
-                </div>
-              )}
+                )}
+              </motion.div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </AnimatePresence>
 
       <style jsx>{`
         .custom-scrollbar::-webkit-scrollbar {
